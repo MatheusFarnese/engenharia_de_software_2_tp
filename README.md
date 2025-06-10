@@ -3,11 +3,11 @@
 ## Explicação do sistema
 Esse é um sistema para a realização de cálculos para o jogo Clash of Clans. Clash of Clans é um jogo
 da Supercell, uma empresa finlandesa de desenvolvimento de jogos que foi lançado em 2012 e é muito jogado
-até hoje. Cada jogador possui uma vila (com construções defensivas, chamadas de "defesas") e um exército, sendo que o objetivo principal é atacar as vilas dos
-outros jogadores com o seu exército, visando destruí-las completamente. Para tal, são utilizadas tropas, feitiços
-e heróis. Heróis possuem habilidades especiais que os permitem aplicar dano diretamente em diferentes locais da vila,
-sendo que várias estratégias de ataque envolvem a destruição de defesas específicas utilizando essas habilidades especiais combinadas
-com feitiços de dano.
+até hoje. Cada jogador possui uma vila (com construções defensivas, chamadas de "defesas") e um exército, sendo que o
+objetivo principal é atacar as vilas dos outros jogadores com o seu exército, visando destruí-las completamente. Para tal,
+são utilizadas tropas, feitiços e heróis. Heróis possuem habilidades especiais que os permitem aplicar dano diretamente em
+diferentes locais da vila, sendo que várias estratégias de ataque envolvem a destruição de defesas específicas utilizando
+essas habilidades especiais combinadas com feitiços de dano.
 
 Esse sistema foi feito exatamente para facilitar os cálculos para essas estratégias, relacionando para cada defesa
 da vila do oponente (setado pelo usuário), o número de feitiços de terremoto (um tipo de feitiço de dano do jogo) necessário para, pareado com
@@ -30,3 +30,14 @@ O backend do sistema foi totalmente desenvolvido em python. O código foi modula
 Para o frontend (i.e. interface web) foi utilizado o framework streamlit, que é um framework python open-source.
 
 Para os testes, foi utilizado o pytest, configurado também no github actions.
+
+## Execução do sistema
+Utilize o seu método preferido (e.g. git clone ou download zip) para fazer o download dos arquivos desse repositório para o seu computador.
+Em seguida, abra um terminal e execute o seguinte comando:
+
+$ streamlit run streamlit_app.py
+
+Ao executar esse comando, será aberto uma página no seu browser defaut com a aplicação desenvolvida.
+Caso o framework streamlit não esteja instalado, é possível instalar com:
+
+$ pip install streamlit
