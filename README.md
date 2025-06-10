@@ -33,7 +33,7 @@ Para os testes, foi utilizado o pytest, configurado também no github actions.
 
 ## Execução do sistema
 Utilize o seu método preferido (e.g. git clone ou download zip) para fazer o download dos arquivos desse repositório para o seu computador.
-Em seguida, abra um terminal, vá para o diretório root (que contém os arquivos .py e o folder "datasets") e execute o seguinte comando:
+Em seguida, abra um terminal, vá para o diretório raiz da aplicação (o diretório que contém os arquivos .py e o folder "datasets") e execute o seguinte comando:
 
 $ streamlit run streamlit_app.py
 
