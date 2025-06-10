@@ -26,5 +26,7 @@ para derrubar cada defesa, podendo ser combinado com o seeking shield e com um e
 
 ## Explicação das tecnologias utilizadas
 O backend do sistema foi totalmente desenvolvido em python. O código foi modularizado em classes, cada qual com uma tarefa específica.
+
 Para o frontend (i.e. interface web) foi utilizado o framework streamlit, que é um framework python open-source.
+
 Para os testes, foi utilizado o pytest, configurado também no github actions.
