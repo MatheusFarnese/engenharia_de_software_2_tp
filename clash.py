@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-class Dataset:
+class GameData:
     def __init__(self, data_dir):
         self.__tables = {}
         for dirpath, _, filenames in os.walk(data_dir):
@@ -246,7 +246,7 @@ class NukeEquipments:
 
 class Manager:
     def __init__(self, dataset_path, heroes_lvl, equipments_lvl, th = 17, eq_perc = 0.29):
-        self.data = Dataset(dataset_path)
+        self.data = GameData(dataset_path)
         self.data.heroes_by_lvl(heroes_lvl)
         self.data.equipments_by_lvl(equipments_lvl)
         self.data.defenses_by_th(th)
@@ -294,6 +294,9 @@ def example():
     m = Manager(path, heroes_lvl, equipments_lvl, th)
 
     print(m.setup('fireball'))
+    print()
     print(m.setup('spiky_ball'))
+    print()
     print(m.setup('royal_champion'))
+
 #example()

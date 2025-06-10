@@ -1,9 +1,9 @@
-from clash import Dataset, Earthquake, RoyalChampion, NukeEquipments, Manager
+from clash import GameData, Earthquake, RoyalChampion, NukeEquipments, Manager
 
 DATASET_PATH = "./datasets"
 
 def test_get_th_defenses():
-    d = Dataset(DATASET_PATH)
+    d = GameData(DATASET_PATH)
     d.defenses_by_th(16)
     for th in d.get_defenses()['th']:
         assert th <= 16
