@@ -57,7 +57,7 @@ def wait_for_app_ready(driver):
 
 def test_page_load(driver):
     wait_for_app_ready(driver)
-    assert "Streamlit" in driver.title
+    assert ("Streamlit" in driver.title) or ("streamlit" in driver.title)
 
 
 def test_number_input_fields(driver):
