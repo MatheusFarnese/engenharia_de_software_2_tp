@@ -4,6 +4,7 @@ E2E UI Tests for Streamlit App using Selenium and Pytest.
 
 import time
 import pytest
+import subprocess
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -12,6 +13,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 
+@pytest.fixture(scope="session", autouse=True)
+def streamlit_server():
+    proc = subprocess.Popen(["streamlit", "run", "streamlit_app.py"])
+    time.sleep(5)  
+    yield
+    proc.terminate()
 
 @pytest.fixture(scope="module")
 def driver():
