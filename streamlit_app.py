@@ -92,8 +92,13 @@ if st.button("Apply Level Changes"):
 
 # --- Step 3: Select Setup Type ---
 st.subheader("3. Choose Setup Type")
-st.session_state.setup = st.selectbox(
-    "Setup", options=SETUPS, index=SETUPS.index(st.session_state.setup), format_func=lambda x: x.replace('_', ' ').title(), key="setup_selector")
+st.session_state.setup = st.radio(
+    "Setup Type",
+    options=SETUPS,
+    index=SETUPS.index(st.session_state.setup),
+    format_func=lambda x: x.replace('_', ' ').title(),
+    key="setup_selector"
+)
 
 # --- Step 4: Display Setup Controls ---
 st.subheader("4. Adjust Defense Levels")
@@ -119,6 +124,8 @@ if isinstance(data, pd.DataFrame) and not data.empty:
         st.write("\n**Rocket Spear shots needed**")
     else:
         st.write("\n**Earthquake spells needed**")
-    st.dataframe(st.session_state.manager.setup(st.session_state.setup))
+    #st.dataframe(st.session_state.manager.setup(st.session_state.setup))
+    df = st.session_state.manager.setup(st.session_state.setup)
+    st.table(df)
 else:
     st.warning("No defense data available.")
