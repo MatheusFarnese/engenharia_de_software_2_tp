@@ -1,4 +1,5 @@
 pandas
 pytest
+flake8
 selenium
 webdriver-manager
