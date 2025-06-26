@@ -17,7 +17,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 @pytest.fixture(scope="session", autouse=True)
 def streamlit_server():
-    proc = subprocess.Popen(["streamlit", "run", "streamlit_app.py"])
+    proc = subprocess.Popen(["streamlit", "run", "streamlit_app.py", "--server.headless=true"])
     
     # Wait until Streamlit is actually ready
     for _ in range(20):
